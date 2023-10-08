@@ -19,11 +19,13 @@ public class function {
 
         System.out.println(Arrays.toString(numbers));
 
-        remove(numbers, 2);
-
         System.out.println(Arrays.toString(numbers));
 
-        replaceElement(numbers, 2, 99);
+        replaceElement(numbers, 4, 22);
+        //System.out.println(Arrays.toString(numbers));
+
+        get(numbers, 5);
+
     }
 
     static void change(int[] array) {
@@ -54,14 +56,15 @@ public class function {
         }
     }
 
-    static void replaceElement(int[] arr, int index1, int value) {
-        arr[index1] = value;
+    static void replaceElement(int[] arr, int index, int value) {
+        arr[index] = value;
     }
 
-    static  void remove(int[] arr, int index) {
-        for (int i = index; i < arr.length - 1; i++) {
-            // Shift the elements to the left from the index to the end of the array.
-            arr[i] = arr[i + 1];
-        }
+
+    static  void get(int[] arr, int index) {
+        int temp = arr[index];
+        System.out.println(temp);
     }
+
+
 }
