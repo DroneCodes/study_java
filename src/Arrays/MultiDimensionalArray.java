@@ -39,7 +39,7 @@ public class MultiDimensionalArray {
                          for (int column = 0; column < arr[row].length; column++) {
                             System.out.println(arr[row][column] + " ");
                        }
-                       // make sure to add a new line after each row so it can be printed in a matrix form
+                       // make sure to add a new line after each row, so it can be printed in a matrix form
                             System.out.println();
                      }
 

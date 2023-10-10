@@ -8,28 +8,22 @@ public class function {
 
     public static void main(String[] args) {
 
-            int[] numbers = {1, 2, 3, 4, 5,6 ,7, 8, 9, 10};
-            System.out.println(Arrays.toString(numbers));
+        int[] arr = new int[5];
 
-            change(numbers);
+        set(arr, 0, 10);
+        set(arr, 1, 20);
+        set(arr, 2, 30);
+        set(arr, 3, 40);
+        set(arr, 4, 50);
 
-            System.out.println(Arrays.toString(numbers));
+        System.out.println(Arrays.toString(arr));
 
-            reverse(numbers);
+        reverse(arr);
 
-        System.out.println(Arrays.toString(numbers));
+        System.out.println(Arrays.toString(arr));
 
-        System.out.println(Arrays.toString(numbers));
+        max(arr);
 
-        replaceElement(numbers, 4, 22);
-        //System.out.println(Arrays.toString(numbers));
-
-        get(numbers, 5);
-
-    }
-
-    static void change(int[] array) {
-        array[0] = 99;
     }
 
     static void swap(int[] arr, int index1, int index2) {
@@ -39,6 +33,11 @@ public class function {
     }
 
     static void reverse(int[] arr) {
+
+        if (arr == null || arr.length == 0) {
+            System.out.println("Array is null or empty");
+            return;
+        }
         // Initialize two pointers, 'start' and 'end', to the beginning and end of the array.
         int start = 0;
         int end = arr.length - 1;
@@ -57,13 +56,61 @@ public class function {
     }
 
     static void replaceElement(int[] arr, int index, int value) {
-        arr[index] = value;
+        int temp = value;
+        arr[index] = temp;
     }
 
 
-    static  void get(int[] arr, int index) {
+    static void get(int[] arr, int index) {
         int temp = arr[index];
         System.out.println(temp);
+    }
+
+    static void set(int[] arr, int index, int value) {
+        int temp = value;
+        arr[index] = temp;
+    }
+
+    static void remove(int[] arr, int index) {
+        int temp = arr[index];
+        arr[index] = arr[arr.length - 1];
+    }
+
+    static int max(int[] arr) {
+        if (arr == null || arr.length == 0) {
+            System.out.println("Array is null or empty");
+            return -1;
+        }
+        int max = arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        System.out.println(max);
+        return max;
+    }
+
+    static int maxRange(int[] arr, int start, int end) {
+
+        if (end > start) {
+            System.out.println("Invalid range");
+            return -1;
+        }
+
+        if (arr == null) {
+            System.out.println("Array is null");
+            return -1;
+        }
+
+        int max = arr[start];
+        for (int i = start; i < end; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        System.out.println(max);
+        return max;
     }
 
 
