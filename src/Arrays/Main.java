@@ -10,7 +10,6 @@ public class Main {
 
         String[] names = {"John", "Jane", "Jill", "Jack"};
 
-
         String[] newNames = new String[5];
 
         for (int i = 0; i < names.length; i++) {

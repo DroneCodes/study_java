@@ -33,6 +33,33 @@ public class Main {
             5. Space complexity is not constant because of recursive calls.
 
 
+            // Tail Recursion:
+
+            1. A recursive function is tail recursive when the recursive call is the last thing executed by the function.
+
+
+            // How to understand and approach a recursive problem
+
+            1. Understand the problem
+            2. Identify if you can break the problem into smaller sub-problems
+            3. Write the recursive solution if needed
+            4. Draw the recursion tree
+            5. About the tree:
+                - see the flow of functions, how they are getting in stack
+                - Identify and focus on the left tree calls and the right tree calls
+                - Draw the tree and pointers using pen and pepper
+                - Use a debugger to see the flow of the program
+                - See how the values and what type of values are returned at each step
+                - See where the function call would come out of the stack
+
+
+            // Variables in Recursion:
+
+                a - variable that is passed as an argument to the function
+                b - variable that is declared inside the function
+                c - variable that is returned by the function
+
+
             // Example of Recursion:
 
             public static void main(String[] args) {
