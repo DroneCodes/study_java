@@ -15,3 +15,11 @@ public class PalindromeNumber {
         return rev == x;
     }
 }
+
+
+class PalindromeNumberTest{
+    public static void main(String[] args) {
+        PalindromeNumber pn = new PalindromeNumber();
+        System.out.println(pn.isPalindrome(121));
+    }
+}
