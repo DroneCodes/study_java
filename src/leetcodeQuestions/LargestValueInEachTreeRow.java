@@ -7,11 +7,11 @@ import java.util.Queue;
 
 class TreeNode {
       int val;
-      TreeNode left;
-      TreeNode right;
+      treeNode left;
+      treeNode right;
       TreeNode() {}
       TreeNode(int val) { this.val = val; }
-      TreeNode(int val, TreeNode left, TreeNode right) {
+      TreeNode(int val, treeNode left, treeNode right) {
           this.val = val;
           this.left = left;
           this.right = right;
@@ -19,14 +19,14 @@ class TreeNode {
   }
 
 class Solution {
-    public List<Integer>LargestValueInEachTreeRow(TreeNode root) {
+    public List<Integer>LargestValueInEachTreeRow(treeNode root) {
         List<Integer> list = new ArrayList<>();
 
         if (root == null) {
             return list;
         }
 
-        Queue<TreeNode> queue = new LinkedList<>();
+        Queue<treeNode> queue = new LinkedList<>();
         queue.add(root);
 
         while (!queue.isEmpty()) {
@@ -34,7 +34,7 @@ class Solution {
             int max = Integer.MIN_VALUE;
 
             for (int i = 0; i < size; i++) {
-                TreeNode node = queue.poll();
+                treeNode node = queue.poll();
                 max = Math.max(max, node.val);
 
                 if (node.left != null) {
