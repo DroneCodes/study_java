@@ -9,7 +9,7 @@ public class PalindromicSubstrings {
      * This method counts the number of palindromic substrings in a given string.
      * It iterates over the string, and for each character, it expands from the middle to find palindromic substrings.
      *
-     * @param s The string in which to count palindromic substrings.
+     * @param : The string in which to count palindromic substrings.
      * @return The count of palindromic substrings in the given string.
      */
     public static int countSubstrings(String s) {
