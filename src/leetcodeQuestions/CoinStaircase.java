@@ -24,3 +24,4 @@ public class CoinStaircase {
         return rows;
     }
 }
+
