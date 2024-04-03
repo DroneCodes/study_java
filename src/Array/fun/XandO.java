@@ -51,9 +51,9 @@ public class XandO {
      */
     public void changePlayer() {
         if (currentPlayer == 'X') {
-            currentPlayer = 'O';
+            currentPlayer = '0';
         } else {
-            currentPlayer = 'X';
+            currentPlayer = '0';
         }
     }
 
