@@ -51,9 +51,9 @@ public class XandO {
      */
     public void changePlayer() {
         if (currentPlayer == 'X') {
-            currentPlayer = '0';
+            currentPlayer = 'O';
         } else {
-            currentPlayer = '0';
+            currentPlayer = 'X';
         }
     }
 
@@ -119,7 +119,7 @@ public class XandO {
      * Returns true if the three chars are the same, and false otherwise.
      */
     private boolean checkRowCol(char c, char c1, char c2) {
-        return ((c != '-') && (c == c1) && (c == c2));
+        return ((c != ' ') && (c == c1) && (c == c2));
     }
 
     /**
@@ -169,15 +169,23 @@ public class XandO {
         System.out.print("\n| - | - | - |");
         System.out.println("\n");
     }
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
+    public void openingMessage() {
         System.out.println("Welcome to Tic Tac Toe!");
-        System.out.println("The game board looks like this: \n1 2 3\n4 5 6\n7 8 9");
+        System.out.print("\n| - | - | - |");
+        System.out.print("\n| - | - | - |");
+        System.out.print("\n| - | - | - |");
+        System.out.println("\n");
         System.out.println("Each player will enter the number of the spot where they want to place their mark.");
         System.out.println("The first player to get 3 of their marks in a row (up, down, across, or diagonally) is the winner.");
         System.out.println("When all 9 spots are filled, the game is over. If no player has 3 marks in a row, the game ends in a tie.\n");
+    }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+
         XandO game = new XandO();
+        game.openingMessage();
         game.displayWinningCombinations();
 
         System.out.println("Player 1, enter your name:");
@@ -188,30 +196,30 @@ public class XandO {
 
 
         do {
-            System.out.println("Player " + (game.currentPlayer == 'X' ? player1 : player2) + ", enter an empty row and column to place your mark!");
-            int row = scanner.nextInt();
-            int col = scanner.nextInt();
+            System.out.println("Player " + (game.currentPlayer == 'X' ? player1 : player2) + ", it's your turn!");
+
+            int row = scanner.nextInt() - 1;
+            int col = scanner.nextInt() - 1;
 
             while (!game.placeMark(row, col)) {
                 System.out.println("Invalid position, try again.");
-                row = scanner.nextInt();
-                col = scanner.nextInt();
+                row = scanner.nextInt() - 1;
+                col = scanner.nextInt() - 1;
             }
 
             game.printBoard();
 
-
             if (game.checkForWin()) {
                 System.out.println("Player " + (game.currentPlayer == 'X' ? player1 : player2) + " wins!");
                 game = new XandO();
+                continue; // Skip the rest of the loop and start a new game
             } else if (game.isBoardFull()) {
                 System.out.println("The game is a tie!");
                 game = new XandO();
+                continue; // Skip the rest of the loop and start a new game
             }
 
             game.changePlayer(); // Change player after checking for win or tie
-
-            System.out.println("Player " + (game.currentPlayer == 'X' ? player1 : player2) + ", it's your turn!");
 
         } while (true);
     }
