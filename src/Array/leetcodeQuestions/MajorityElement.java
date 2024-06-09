@@ -12,7 +12,7 @@ public class MajorityElement {
      * @param args Unused.
      */
     public static void main(String[] args) {
-        int[] arr = {3, 2, 3};
+        int[] arr = {3, 2, 3, 2};
         // Print the majority element of the array
         System.out.println(majorityElement(arr));
     }

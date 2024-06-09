@@ -12,6 +12,8 @@ public class Main {
 
         String[] newNames = new String[5];
 
+
+
         for (int i = 0; i < names.length; i++) {
             newNames[i] = names[i];
         }
