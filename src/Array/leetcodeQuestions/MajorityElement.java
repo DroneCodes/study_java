@@ -15,10 +15,12 @@ public class MajorityElement {
      */
     public static void main(String[] args) {
         int[] arr = {3, 2, 3, 3, 4, 3, 5, 7};
+        int[] a = {0, 4, 2, 4, 8, 5};
         // Print the majority element of the array
         System.out.println(majorityElement(arr));
         MajorityElement majorityElement = new MajorityElement();
         majorityElement.printMajority(arr);
+        majorityElement.findMajority(a);
     }
 
     /**
@@ -50,7 +52,7 @@ public class MajorityElement {
         for (int i = 0; i < arr.length; i++) {
             if (count == 0) {
                 major = arr[i];
-                count = count + 1;
+                count = 1;
             } else if (arr[i] == major) {
                 count = count + 1;
             } else {
