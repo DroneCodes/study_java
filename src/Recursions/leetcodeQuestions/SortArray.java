@@ -16,7 +16,7 @@ public class SortArray {
      */
     public int isArrayInSortedOrder(int[] arr, int index) {
         // Base case: if the index is 1, the array is sorted.
-        if(index == 1) {
+        if(index == 1 || index == 0) {
             return 1;
         }
         // Recursive case: check if the current element is less than the previous one.
@@ -26,7 +26,7 @@ public class SortArray {
 
     public static void main(String[] args) {
         SortArray obj = new SortArray();
-        int[] arr = {1, 3, 1, 4, 5};
+        int[] arr = {1,2,3,4,5};
         System.out.println(obj.isArrayInSortedOrder(arr, arr.length));
     }
 }
