@@ -26,7 +26,7 @@ public class SortArray {
 
     public static void main(String[] args) {
         SortArray obj = new SortArray();
-        int[] arr = {1,2,3,4,5};
+        int[] arr = {1, 2, 3, 4, 5};
         System.out.println(obj.isArrayInSortedOrder(arr, arr.length));
     }
 }
