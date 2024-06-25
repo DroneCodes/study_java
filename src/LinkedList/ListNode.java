@@ -7,7 +7,7 @@ package LinkedList;
 public class ListNode {
 
     private int data;  // The integer value stored in this node
-    private ListNode next;  // Reference to the next node in the list
+    public ListNode next;  // Reference to the next node in the list
 
     /**
      * Constructs a new ListNode with the given data and a null next node reference.
