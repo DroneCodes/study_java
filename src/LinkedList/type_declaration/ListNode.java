@@ -1,4 +1,4 @@
-package LinkedList;
+package LinkedList.type_declaration;
 
 /**
  * This class represents a node in a singly linked list.

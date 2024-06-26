@@ -1,5 +1,7 @@
 package LinkedList;
 
+import LinkedList.type_declaration.ListNode;
+
 public class Main {
 
     /*
