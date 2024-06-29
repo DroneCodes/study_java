@@ -15,4 +15,15 @@ public class CircularLinkedList {
         }
         return length;
     }
+
+    // Printing the contents of a Circular Linked List
+
+    public void printList(CircularListNode head) {
+        CircularListNode current = head.getNext();
+        while (current != head) {
+            System.out.print(current.getData() + "->");
+            current = current.getNext();
+        }
+        System.out.println("(" + current.getData() + ")head");
+    }
 }
