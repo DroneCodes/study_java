@@ -25,5 +25,6 @@ public class CircularLinkedList {
             current = current.getNext();
         }
         System.out.println("(" + current.getData() + ")head");
+
     }
 }
