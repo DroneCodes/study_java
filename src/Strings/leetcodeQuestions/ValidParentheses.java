@@ -16,6 +16,10 @@ public class ValidParentheses {
      *
      * @param s The string of parentheses to validate.
      * @return true if the string is valid, false otherwise.
+     *
+     * Time Complexity: O(n) where n is the length of the input string.
+     * We iterate through each character in the string once.
+     * Space Complexity: O(n) in the worst case where all characters are opening brackets.
      */
     public boolean isValid(String s) {
         // Initialize a stack to keep track of the opening brackets

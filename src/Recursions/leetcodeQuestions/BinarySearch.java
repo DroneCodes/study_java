@@ -40,6 +40,14 @@ public class BinarySearch {
 
 
 class Solution {
+
+    /**
+     * Performs binary search on a sorted array to find the target value.
+     *
+     * @param nums the sorted array of integers
+     * @param target the integer value to search for
+     * @return the index of the target if found, otherwise -1
+     */
     public static int search(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;
