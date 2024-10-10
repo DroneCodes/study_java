@@ -1,6 +1,14 @@
 package Strings.leetcodeQuestions;
 
 public class SentenceSimilarityIII {
+    /**
+     * Determines if two sentences are similar. Two sentences are similar if one sentence can be obtained from the other by
+     * inserting or deleting some words at the beginning or the end of the other sentence.
+     *
+     * @param sentence1 the first sentence
+     * @param sentence2 the second sentence
+     * @return true if the sentences are similar, false otherwise
+     */
     public boolean areSentencesSimilar(String sentence1, String sentence2) {
         String[] words1 = sentence1.split(" ");
         String[] words2 = sentence2.split(" ");
@@ -22,6 +30,11 @@ public class SentenceSimilarityIII {
         return i + j == Math.min(n1, n2);
     }
 
+    /**
+     * Main method to test the areSentencesSimilar method with example test cases.
+     *
+     * @param args command line arguments
+     */
     public static void main(String[] args) {
         SentenceSimilarityIII solution = new SentenceSimilarityIII();
 

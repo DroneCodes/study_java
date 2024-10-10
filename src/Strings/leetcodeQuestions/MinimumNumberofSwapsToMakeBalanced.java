@@ -1,10 +1,18 @@
 package Strings.leetcodeQuestions;
 
 public class MinimumNumberofSwapsToMakeBalanced {
+    /**
+     * Calculates the minimum number of swaps required to make the string balanced.
+     * A string is balanced if every '[' has a corresponding ']'.
+     *
+     * @param s the input string containing only '[' and ']'
+     * @return the minimum number of swaps required to balance the string
+     */
     public int minSwaps(String s) {
         int balance = 0;
         int swaps = 0;
 
+        // Iterate through each character in the string
         for (char c : s.toCharArray()) {
             if (c == '[') {
                 balance++;
@@ -12,15 +20,21 @@ public class MinimumNumberofSwapsToMakeBalanced {
                 balance--;
             }
 
+            // If balance is negative, a swap is needed
             if (balance < 0) {
                 swaps++;
-                balance = 1;
+                balance = 1; // Reset balance after swap
             }
         }
 
         return swaps;
     }
 
+    /**
+     * Main method to test the minSwaps method with example test cases.
+     *
+     * @param args command line arguments
+     */
     public static void main(String[] args) {
         MinimumNumberofSwapsToMakeBalanced solution = new MinimumNumberofSwapsToMakeBalanced();
 
