@@ -7,20 +7,19 @@ public class SeparateWhiteAndBlackBalls {
      * @param s the binary string representing the balls
      * @return the minimum number of swaps needed
      */
-    public int minSwaps(String s) {
+    public long minSwaps(String s) {
         int n = s.length();
-        int zeroCount = 0;
-        int swaps = 0;
+        long stepCount = 0;
+        long steps = 0;
 
         for (int i = 0; i < n; i++) {
             if (s.charAt(i) == '1') {
-                zeroCount++;
+                stepCount++;
             } else if (s.charAt(i) == '0') {
-                swaps += zeroCount;
+                steps = steps + stepCount;
             }
         }
-
-        return swaps;
+        return steps;
     }
 
     public static void main(String[] args) {
