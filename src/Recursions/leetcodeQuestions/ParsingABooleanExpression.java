@@ -38,6 +38,7 @@ public class ParsingABooleanExpression {
             return true;
         } else { // operator == '|'
             while (!temp.isEmpty()) {
+
                 if (temp.pop() == 't') {
                     return true;
                 }
