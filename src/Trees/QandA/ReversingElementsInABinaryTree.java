@@ -13,6 +13,9 @@ public class ReversingElementsInABinaryTree {
      * The nodes are visited level by level from left to right, but the output is in reverse order.
      *
      * @param root The root node of the binary tree.
+     *
+     * Time Complexity: O(n)
+     * Space Complexity: O(n)
      */
     public static void levelOrderTraversalInReverse(BinaryTreeNode root) {
         if (root == null) {
