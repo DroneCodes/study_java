@@ -27,6 +27,21 @@ public class FindTargetElementINBinaryTree {
         return findTargetRecursive(root.getLeft(), target) || findTargetRecursive(root.getRight(), target);
     }
 
+    public static boolean findTargetBST(BinaryTreeNode root, int target) {
+    if (root == null) {
+        return false;
+    }
+    if (root.getData() == target) {
+        return true;
+    }
+
+    if (target < root.getData()) {
+        return findTargetBST(root.getLeft(), target);
+    } else {
+        return findTargetBST(root.getRight(), target);
+    }
+}
+
     /**
      * Iteratively finds the target element in the binary tree using a queue.
      *
